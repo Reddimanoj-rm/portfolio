@@ -66,9 +66,9 @@ portfolio/
 ## 📞 Contact
 
 **Reddi Manoj**
-- Email: [Your Email]
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- Email: manojreddi2005@gmail.com
+- LinkedIn: https://www.linkedin.com/in/manoj-reddi-179520294/
+- GitHub: [https://github.com/Reddimanoj-rm
 
 ---
 
