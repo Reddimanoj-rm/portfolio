@@ -144,7 +144,7 @@ body.dark-theme .section-title {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #00f0ff, #8a2be2, #ff007f);
+    background: linear-gradient(90deg, #ffb347, #ffd57f);
     border-radius: 2px;
 }
 
@@ -228,12 +228,12 @@ body.dark-theme .logo {
     height: 50px;
     border-radius: 12px;
     object-fit: cover;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ffb347, #ffd57f);
     transition: all 0.3s ease;
 }
 
 body.dark-theme .nav-logo {
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #ffb347, #ffd57f);
 }
 
 .nav-logo:hover {
@@ -386,23 +386,41 @@ body.dark-theme .hero-left h4 {
     font-weight: 800;
     margin-bottom: 1rem;
     line-height: 1.1;
-    color: #0a0a0f;
+    background: linear-gradient(90deg, #ffffff 50%, #ffb347 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
 }
 
 body.dark-theme .hero-left h1,
 body.dark-theme .hero-name {
-    color: #ffd57f;
+    background: linear-gradient(90deg, #ffffff 50%, #ffd57f 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .hero-title {
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 600;
-    color: #0077ff;
+    color: #0a0a0f;
     margin-bottom: 2rem;
 }
 
 body.dark-theme .hero-title {
-    color: #00f0ff;
+    color: #ffd57f;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: #ffb347;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+body.dark-theme .hero-subtitle {
+    color: #ffd57f;
 }
 
 .hero-left p {
@@ -449,7 +467,7 @@ body.dark-theme .hero-left p {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(0, 240, 255, 0.4);
+    box-shadow: 0 12px 35px rgba(255, 179, 71, 0.4);
 }
 
 .btn-secondary {
@@ -466,16 +484,16 @@ body.dark-theme .btn-secondary {
 }
 
 .btn-secondary:hover {
-    background: rgba(0, 119, 255, 0.1);
-    border-color: #0077ff;
-    color: #0077ff;
+    background: rgba(255, 179, 71, 0.1);
+    border-color: #ffb347;
+    color: #ffb347;
     transform: translateY(-2px);
 }
 
 body.dark-theme .btn-secondary:hover {
-    background: rgba(0, 240, 255, 0.1);
-    border-color: #00f0ff;
-    color: #00f0ff;
+    background: rgba(255, 213, 127, 0.1);
+    border-color: #ffd57f;
+    color: #ffd57f;
 }
 
 .btn-outline {
@@ -490,7 +508,7 @@ body.dark-theme .btn-outline {
 }
 
 .btn-outline:hover {
-    background: #00f0ff;
+    background: #ffb347;
     color: #0a0a0f;
     transform: translateY(-2px);
 }
@@ -572,7 +590,7 @@ body.dark-theme .about-text p {
 }
 
 .detail-item i {
-    color: #00f0ff;
+    color: #ffb347;
     font-size: 1.5rem;
     margin-top: 0.2rem;
 }
@@ -729,7 +747,7 @@ body.dark-theme .project-card {
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, #00f0ff, #8a2be2, #ff007f);
+    background: linear-gradient(90deg, #ffb347, #ffd57f);
     transform: scaleX(0);
     transition: transform 0.3s ease;
 }
@@ -740,8 +758,8 @@ body.dark-theme .project-card {
 
 .project-card:hover {
     transform: translateY(-10px);
-    border-color: rgba(0, 240, 255, 0.3);
-    box-shadow: 0 20px 50px rgba(0, 240, 255, 0.2);
+    border-color: rgba(255, 179, 71, 0.3);
+    box-shadow: 0 20px 50px rgba(255, 179, 71, 0.2);
 }
 
 .project-header {
@@ -812,13 +830,24 @@ body.dark-theme .project-card p {
 }
 
 .project-tech span {
-    background: rgba(0, 240, 255, 0.1);
-    color: #00f0ff;
+    background: rgba(255, 179, 71, 0.1);
+    color: #ffb347;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(0, 240, 255, 0.2);
+    border: 1px solid rgba(255, 179, 71, 0.2);
+}
+
+.project-tech span.edu-year {
+    background: rgba(255, 179, 71, 0.2);
+    color: #0a0a0f;
+    font-weight: 600;
+}
+
+body.dark-theme .project-tech span.edu-year {
+    color: #ffd57f;
+    background: rgba(255, 179, 71, 0.15);
 }
 
 /* Certificates Section */
@@ -875,7 +904,7 @@ body.dark-theme .certificate-card {
 .certificate-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #00f0ff 0%, #8a2be2 100%);
+    background: linear-gradient(135deg, #ffb347 0%, #ffd57f 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -904,6 +933,23 @@ body.dark-theme .certificate-card h3 {
 .certificate-card .btn-outline {
     margin-top: auto;
     align-self: center;
+    color: #ffb347;
+    border-color: #ffb347;
+}
+
+.certificate-card .btn-outline:hover {
+    background: #ffb347;
+    color: #0a0a0f;
+}
+
+body.dark-theme .certificate-card .btn-outline {
+    color: #ffd57f;
+    border-color: #ffd57f;
+}
+
+body.dark-theme .certificate-card .btn-outline:hover {
+    background: #ffd57f;
+    color: #0a0a0f;
 }
 
 body.dark-theme .certificate-card p {
@@ -917,6 +963,17 @@ body.dark-theme .certificate-card p {
 
 body.dark-theme .contact {
     background: transparent;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffb347;
+    margin-bottom: 1.5rem;
+}
+
+body.dark-theme .contact-info h3 {
+    color: #ffd57f;
 }
 
 .contact-content {
@@ -1055,12 +1112,14 @@ body.dark-theme .form-group textarea {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 179, 71, 0.3);
     transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 179, 71, 0.5);
+    background: linear-gradient(135deg, #ffd57f, #ffb347);
 }
 
 
