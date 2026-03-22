@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -52,20 +54,21 @@
         <!-- Home Section -->
         <section id="home" class="hero section-bg">
             <div class="hero-content">
-                <div class="hero-left">
+                <div class="hero-left" data-aos="fade-right" data-aos-duration="1000">
                     <h4>Hello, I'm</h4>
                     <h1 class="hero-name">Reddi Manoj</h1>
-                    <h2 class="hero-title">Data Analyst</h2>
-                    <h3 class="hero-subtitle">B Tech computer science and engineering 3rd year</h3>
-                    <p>Computer Science student passionate about data analytics, building interactive dashboards, and
-                        creating data-driven solutions.</p>
+                    <h3 class="hero-subtitle">B.Tech CSE (3rd Year) | Aspiring Data Analyst</h3>
+                    <h2 class="hero-title">
+                        <span id="typing-effect"></span>
+                    </h2>
+                    <p>I specialize in transforming data into actionable insights using Python, SQL, Excel, and Power BI. 
+                    I build interactive dashboards and data-driven solutions to solve real-world problems.</p>
                     <div class="hero-buttons">
-                        <a href="#projects" class="btn-secondary">View Projects</a>
-                        <a href="manoj_NEW CV (4).pdf" class="btn-secondary" download>Download Resume</a>
+                        <a href="manoj_NEW CV (4).pdf" target="_blank" class="btn-secondary">View Resume</a>
                         <a href="#contact" class="btn-secondary">Contact Me</a>
                     </div>
                 </div>
-                <div class="hero-right">
+                <div class="hero-right" data-aos="fade-left" data-aos-duration="1000">
                     <div class="profile-container">
                         <div class="profile-glow"></div>
                         <img src="https://i.postimg.cc/FFwd9yf1/Whats-App-Image-2026-03-14-at-02-01-49.jpg"
@@ -80,11 +83,20 @@
             <div class="container">
                 <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
                 <div class="about-content">
-                    <div class="about-text">
-                        <p>I am a Computer Science student at Lovely Professional University with a strong interest in
-                            Data Analytics and software development. I enjoy transforming raw datasets into meaningful
-                            insights and building dashboards that help organizations make better decisions. I also enjoy
-                            creating tools and applications that solve real-world problems.</p>
+                    <div class="about-text" data-aos="fade-up">
+                        <p>I am a passionate Computer Science student at Lovely Professional University with a strong focus on Data Analytics and problem-solving. I specialize in transforming raw data into actionable insights using tools like Python, SQL, Excel, and Power BI.</p>
+                        <p>I have developed multiple real-world projects, including analytics dashboards that improved decision-making efficiency by up to 40%. My interests include data visualization, exploratory data analysis, and building solutions that bridge data with business outcomes.</p>
+                        <p>I am a continuous learner who enjoys working on practical problems and enhancing my technical skills. My goal is to start my career as a Data Analyst and contribute to data-driven decision-making.</p>
+                        
+                        <div class="about-highlights">
+                            <h3>Quick Highlights</h3>
+                            <ul>
+                                <li>📊 3+ Data Analytics Projects</li>
+                                <li>📈 Improved efficiency by up to 40%</li>
+                                <li>💡 Strong in Data Visualization & EDA</li>
+                                <li>🚀 Fast learner & problem solver</li>
+                            </ul>
+                        </div>
                         <div class="about-details">
                             <div class="detail-item">
                                 <i class="fas fa-graduation-cap"></i>
@@ -103,13 +115,14 @@
         <!-- Skills Section -->
         <section id="skills" class="skills section-bg">
             <div class="container">
-                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <h2 class="section-title" data-aos="fade-up">Technical <span class="gradient-text">Skills & Tools</span></h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                         <h3><i class="fas fa-code"></i> Programming Languages</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">C++</span>
                             <span class="skill-tag">Python</span>
+                            <span class="skill-tag">SQL</span>
                             <span class="skill-tag">C</span>
                             <span class="skill-tag">Java</span>
                         </div>
@@ -123,10 +136,11 @@
                             <span class="skill-tag">Seaborn</span>
                         </div>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
                         <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">DAX</span>
                             <span class="skill-tag">GitHub</span>
                             <span class="skill-tag">Excel</span>
                             <span class="skill-tag">Jupyter Notebook</span>
@@ -146,6 +160,24 @@
             </div>
         </section>
 
+        <!-- Experience Section -->
+        <section id="experience" class="projects section-bg">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">My <span class="gradient-text">Experience</span></h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="certificate-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Data Analytics Projects</h3>
+                        <p>
+                            Worked on real-world datasets using Python and Power BI to create dashboards, perform EDA, and derive insights for decision-making. Improved operational visibility and efficiency across multiple domains.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Education Section -->
         <section id="education" class="projects section-bg">
             <div class="container">
@@ -156,6 +188,7 @@
                             <h3>Lovely Professional University</h3>
                         </div>
                         <p><strong>B.Tech Computer Science Engineering</strong><br>Punjab, India</p>
+                        <p><em>Focused on Data Analytics & Software Development</em></p>
                         <div class="project-tech">
                             <span class="edu-year">Current</span>
                         </div>
@@ -189,9 +222,10 @@
         <!-- Projects Section -->
         <section id="projects" class="projects section-bg">
             <div class="container">
-                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <h2 class="section-title" data-aos="fade-up">Featured <span class="gradient-text">Projects</span></h2>
                 <div class="projects-grid">
-                    <div class="project-card">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://i.postimg.cc/CKsnfkJ1/hsptl.jpg" alt="Hospital Analytics Dashboard" class="project-img">
                         <div class="project-header">
                             <h3>Hospital Patient Flow & Wait-Time Analytics Dashboard</h3>
                             <div class="project-links">
@@ -203,8 +237,7 @@
                                         class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
-                        <p>Developed a Power BI dashboard analyzing hospital patient flow, wait times, and departmental
-                            efficiency. Improved operational visibility and decision-making efficiency by 35–40%.</p>
+                        <p>Analyzed hospital patient flow and wait times using Power BI dashboard. Identified inefficiencies and improved operational decision-making efficiency by 35–40%.</p>
                         <div class="project-tech">
                             <span>Power BI</span>
                             <span>DAX</span>
@@ -213,17 +246,16 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://i.postimg.cc/dVQwsfDF/1-Esq-DYFK-Iz-GEAm4Fy-ZP0w-Q.jpg" alt="Feed Grains Analysis" class="project-img">
                         <div class="project-header">
                             <h3>Feed Grains Exploratory Analysis using Python</h3>
                             <div class="project-links">
                                 <a href="https://github.com/Reddimanoj-rm/feed-Grains-python-project" target="_blank"
                                     rel="noopener" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
-                        <p>Performed exploratory data analysis on agricultural datasets to analyze production trends and
-                            supply-use patterns. Identified seasonal patterns and commodity-wise insights.</p>
+                        <p>Performed extensive exploratory data analysis on agricultural datasets using Python (Pandas, Matplotlib). Identified production trends and supply-use patterns to derive actionable insights.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>Pandas</span>
@@ -233,7 +265,8 @@
                         </div>
                     </div>
 
-                    <div class="project-card">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://i.postimg.cc/C5fptyv9/1745214884803.jpg" alt="EV Monitoring Dashboard" class="project-img">
                         <div class="project-header">
                             <h3>Interactive EV Monitoring Dashboard</h3>
                             <div class="project-links">
@@ -245,8 +278,7 @@
                                         class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
-                        <p>Created an analytics dashboard visualizing EV battery health and energy usage. Improved data
-                            accessibility and decision-making efficiency by 40%.</p>
+                        <p>Created a comprehensive analytics dashboard for EV monitoring. Visualized battery health and energy usage trends, improving data accessibility and operational efficiency by 40%.</p>
                         <div class="project-tech">
                             <span>Excel</span>
                             <span>Data Modeling</span>
@@ -256,47 +288,46 @@
                 </div>
             </div>
         </section>
-
         <!-- Certificates Section -->
         <section id="certificates" class="certificates section-bg">
             <div class="container">
                 <h2 class="section-title">Professional <span class="gradient-text">Certificates</span></h2>
                 <div class="certificates-grid">
-                    <div class="certificate-card">
+                    <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="certificate-icon">
                             <i class="fas fa-certificate"></i>
                         </div>
                         <h3>ChatGPT-4 Prompt Engineering</h3>
-                        <p>Infosys</p>
+                        <p>Infosys | Learned Prompt Engineering & AI Tools for efficiency</p>
                         <a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_014157693153288192147/1-4d37dcba-a631-4ad2-9ca8-3b5022c6f604.pdf"
                             target="_blank" rel="noopener" class="btn-outline">View Certificate</a>
                     </div>
-                    <div class="certificate-card">
+                    <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="certificate-icon">
                             <i class="fab fa-python"></i>
                         </div>
                         <h3>Python Skill Up</h3>
-                        <p>GeeksForGeeks</p>
+                        <p>GeeksForGeeks | Mastered Python fundamentals and data operations</p>
                         <a href="https://media.geeksforgeeks.org/courses/certificates/59044c7568422ed9ec5f0c60ed3408b0.pdf"
                             target="_blank" rel="noopener" class="btn-outline">View Certificate</a>
                     </div>
-                    <div class="certificate-card">
+                    <div class="certificate-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="certificate-icon">
                             <i class="fas fa-cloud"></i>
                         </div>
                         <h3>Cloud Computing</h3>
-                        <p>IIT Kharagpur</p>
+                        <p>IIT Kharagpur | Explored cloud infrastructure and services</p>
                         <a href="https://drive.google.com/file/d/1kI3ohPa17ncNHj26lszCw0IyIL1Ik_Hn/view?usp=drive_link"
                             target="_blank" rel="noopener" class="btn-outline">View Certificate</a>
                     </div>
-                    <div class="certificate-card">
+                    <div class="certificate-card" data-aos="fade-up" data-aos-delay="400">
                         <div class="certificate-icon">
                             <i class="fas fa-robot"></i>
                         </div>
                         <h3>AI Tools Workshop</h3>
-                        <p>Online Workshop</p>
-                        <a href="https://i.postimg.cc/wjSs9XZP/AI-Tools-Workshop-Certificate.png" target="_blank"
-                            rel="noopener" class="btn-outline">View Certificate</a>
+                        <p>Online Workshop | Hands-on experience with modern AI productivity tools</p>
+                        <a href="https://drive.google.com/file/d/1ax8E7NPU6JILp2yaM5_32dmv_tPvdgBT/view?usp=drive_link"
+                            target="_blank" rel="noopener" class="btn-outline">View Certificate</a>
                     </div>
                 </div>
             </div>
@@ -417,6 +448,10 @@
         </div>
     </footer>
 
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Typed.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js?v=1"></script>
 </body>
 
