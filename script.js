@@ -148,3 +148,33 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+// Initialize AOS (Animate On Scroll)
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    }
+
+    // Initialize Typed.js for Hero Section
+    const typingElement = document.getElementById('typing-effect');
+    if (typingElement && typeof Typed !== 'undefined') {
+        new Typed('#typing-effect', {
+            strings: [
+                'Data Analyst',
+                'Dashboard Developer',
+                'Problem Solver',
+                'Aspiring Data Scientist'
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 2000,
+            loop: true,
+            showCursor: true,
+            cursorChar: '|'
+        });
+    }
+});
