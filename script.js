@@ -21,7 +21,7 @@ if (themeToggle) {
     // Initialize theme toggle icon
     updateThemeToggleIcon();
 
-    themeToggle.addEventListener('click', function() {
+    themeToggle.addEventListener('click', function () {
         body.classList.toggle('dark-theme');
 
         // Save theme preference
@@ -36,7 +36,7 @@ if (themeToggle) {
 const CONTACT_EMAIL = 'manojreddi2005@gmail.com';
 const contactForm = document.querySelector('.contact-form form'); // Make sure we're grabbing the actual form
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         let isValid = true;
         const name = this.querySelector('input[name="name"]');
         const email = this.querySelector('input[name="email"]');
@@ -69,7 +69,7 @@ if (contactForm) {
 
         if (isValid) {
             e.preventDefault(); // Prevent default since we'll submit via AJAX
-            
+
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.textContent;
             submitBtn.textContent = 'Sending...';
@@ -78,7 +78,7 @@ if (contactForm) {
             // Submit using FormSubmit AJAX API
             fetch('https://formsubmit.co/ajax/manojreddi2005@gmail.com', {
                 method: 'POST',
-                headers: { 
+                headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
@@ -90,25 +90,25 @@ if (contactForm) {
                     _subject: `New Portfolio Message from ${name.value}`
                 })
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-                if (data.success || data.success === "true") {
-                    alert('Message sent successfully! Thank you for reaching out.');
-                    this.reset();
-                } else {
-                    alert('Oops! There was a problem confirming your message.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Oops! There was a problem submitting your form. Please try again.');
-            })
-            .finally(() => {
-                submitBtn.textContent = originalBtnText;
-                submitBtn.disabled = false;
-            });
-            
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.success || data.success === "true") {
+                        alert('Message sent successfully! Thank you for reaching out.');
+                        this.reset();
+                    } else {
+                        alert('Oops! There was a problem confirming your message.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                })
+                .finally(() => {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                });
+
         } else {
             e.preventDefault(); // Only prevent submission if validation fails
         }
